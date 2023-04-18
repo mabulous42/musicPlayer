@@ -26,6 +26,10 @@ main{
     height: 100vh;
 }
 
+button{
+    background-color: inherit;
+}
+
 .music-play{
     position: absolute;
     bottom: 0;
@@ -33,4 +37,52 @@ main{
     background-color: rgb(24,24,24);
     width: 100vw;
     height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+.the-player{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.play-pause-btn:focus-within #pause{
+    display: block;
+}
+.play-pause-btn:focus-within #play{
+    display: none;
+}
+
+#play{
+    background-color: white;
+    color: black;
+    padding: 9px 11px;
+    border-radius: 100%;
+    font-size: 17px;
+    /* display: none; */
+}
+
+#pause{
+    display: none;
+    background-color: white;
+    padding:   8px 13px 10px 11px;
+    border-radius: 100%;
+    font-size: 17px;
+    color: black;
+}
+
+#previous,
+#next{
+    color: rgb(186,186,186);
+    font-size: 20px;
+}
+
+#previous:hover,
+#next:hover {
+    color: white;
+}
+
+/* #next{
+    color: rgb(186,186,186);
+} */
