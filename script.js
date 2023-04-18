@@ -15,4 +15,27 @@ function pauseSong() {
     playMusic.style.display = "block";
     pauseMusic.style.display = "none";
 }
+audioFile.volume = 0.5;
+// console.log(volumeLevel);
+
+function increaseVolume() {
+    if (audioFile.volume > 0.9) {
+        return 1.0;
+    } else {
+        audioFile.volume += 0.1;
+        console.log(audioFile.volume);
+        // console.log();
+    }
+
+}
+
+function reduceVolume() {
+    if (audioFile.volume < 0.2) {
+        return 0;
+    } else {
+        audioFile.volume -= 0.1;
+        console.log(audioFile.volume);
+    }
+
+}
 

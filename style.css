@@ -82,3 +82,9 @@ button{
 #next:hover {
     color: white;
 }
+
+#volumeDown,
+#volumeUp{
+    padding: 4px 8px;
+    background-color: red;
+}
