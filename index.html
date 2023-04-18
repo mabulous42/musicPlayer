@@ -14,7 +14,7 @@
         <div class="site-section">
             <div class="personal">A</div>
             <div class="music-section">
-                <audio src=""></audio>
+                <audio id="audio-file" src="./Audio/kizzDan.mp3"></audio>
             </div>
         </div>
         <div class="music-play">
@@ -25,8 +25,8 @@
                         <i class="fa-solid fa-backward-step" id="previous"></i>
                     </button>
                     <button class="play-pause-btn">
-                        <i class="fa-solid fa-play" id="play"></i>
-                        <i class="fa-solid fa-pause" id="pause"></i>
+                        <i class="fa-solid fa-play" id="play" onclick="playSong()"></i>
+                        <i class="fa-solid fa-pause" id="pause" onclick="pauseSong()"></i>
                     </button>
                     <button class="ms-4">
                         <i class="fa-solid fa-forward-step" id="next"></i>
