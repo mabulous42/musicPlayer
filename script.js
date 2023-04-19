@@ -38,6 +38,7 @@ function nextSong() {
         return;
     } else {
         pauseSong()
+        allSongs[count].currentTime = 0;
         count++;
         playSong();        
     }
@@ -48,6 +49,7 @@ function prevSong() {
         return;
     } else {
         pauseSong()
+        allSongs[count].currentTime = 0;
         count--;
         playSong();        
     }
