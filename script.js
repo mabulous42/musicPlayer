@@ -8,21 +8,18 @@ let pauseMusic = document.getElementById("pause");
 let controlVolume = document.getElementById("volume-control");
 
 let allSongs = [audioFile, audioFile2, audioFile3, audioFile4, audioFile5];
-console.log(allSongs[0]);
 
 playMusic.style.display = "none";
 let count = 0;
 
 function playSong() {
-    let music = allSongs[count];
-    music.play();
+    allSongs[count].play();
     pauseMusic.style.display = "none";
     playMusic.style.display = "block";
 }
 
 function pauseSong() {
-    let music = allSongs[count];
-    music.pause();
+    allSongs[count].pause();
     playMusic.style.display = "none";
     pauseMusic.style.display = "block";
 }
