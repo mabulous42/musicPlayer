@@ -33,3 +33,23 @@ function changeVolume() {
     console.log(audioFile.volume);
 }
 
+function nextSong() {
+    if (count === allSongs.length-1) {
+        return;
+    } else {
+        pauseSong()
+        count++;
+        playSong();        
+    }
+}
+
+function prevSong() {
+    if (count === 0) {
+        return;
+    } else {
+        pauseSong()
+        count--;
+        playSong();        
+    }
+}
+
