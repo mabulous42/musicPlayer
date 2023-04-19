@@ -1,9 +1,10 @@
 let audioFile = document.getElementById("audio-file");
 let playMusic = document.getElementById("play");
 let pauseMusic = document.getElementById("pause");
+let controlVolume = document.getElementById("volume-control");
 
-// pauseMusic.style.display = "none";
 playMusic.style.display = "none";
+
 function playSong() {
     audioFile.play();
     pauseMusic.style.display = "none";
@@ -15,27 +16,10 @@ function pauseSong() {
     playMusic.style.display = "none";
     pauseMusic.style.display = "block";
 }
-audioFile.volume = 0.5;
-// console.log(volumeLevel);
 
-function increaseVolume() {
-    if (audioFile.volume > 0.9) {
-        return 1.0;
-    } else {
-        audioFile.volume += 0.1;
-        console.log(audioFile.volume);
-        // console.log();
-    }
-
-}
-
-function reduceVolume() {
-    if (audioFile.volume < 0.2) {
-        return 0;
-    } else {
-        audioFile.volume -= 0.1;
-        console.log(audioFile.volume);
-    }
-
+console.log(controlVolume.value);
+function changeVolume() {
+    audioFile.volume = controlVolume.value;
+    console.log(audioFile.volume);    
 }
 

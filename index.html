@@ -35,8 +35,7 @@
                 <div>Y</div>
             </div>
             <div class="me-3">
-                <button id="volumeDown" onclick="reduceVolume()" class="">-</button>
-                <button id="volumeUp" onclick="increaseVolume()">+</button>
+                <input type="range" name="" id="volume-control" min="0" max="1" value="0.5" step="0.1" oninput="changeVolume()">
             </div>
         </div>
     </main>
