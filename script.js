@@ -6,16 +6,30 @@ let audioFile5 = document.getElementById("audio-file5");
 let playMusic = document.getElementById("play");
 let pauseMusic = document.getElementById("pause");
 let controlVolume = document.getElementById("volume-control");
+let songDuration = document.getElementById("show-music-duration");
 
 let allSongs = [audioFile, audioFile2, audioFile3, audioFile4, audioFile5];
 
 playMusic.style.display = "none";
 let count = 0;
+// let sDuration = allSongs[0].duration;
+console.log(audioFile.duration);
+
+
 
 function playSong() {
     allSongs[count].play();
+    console.log(allSongs[count].duration);
     pauseMusic.style.display = "none";
     playMusic.style.display = "block";
+    songDuration.innerHTML = `
+    <div class="me-2">${allSongs[count].currentTime}</div>
+    <input class="w-50" type="range" name="" min="${allSongs[count].currentTime}" max="${allSongs[count].duration}" value="0" step="">
+    <div class="ms-2">${allSongs[count].duration}</div>
+    `
+    setInterval(() => {
+        console.log(Math.ceil(allSongs[count].currentTime));
+    }, 1000);
 }
 
 function pauseSong() {
@@ -31,13 +45,13 @@ function changeVolume() {
 }
 
 function nextSong() {
-    if (count === allSongs.length-1) {
+    if (count === allSongs.length - 1) {
         return;
     } else {
         pauseSong()
         allSongs[count].currentTime = 0;
         count++;
-        playSong();        
+        playSong();
     }
 }
 
@@ -48,7 +62,6 @@ function prevSong() {
         pauseSong()
         allSongs[count].currentTime = 0;
         count--;
-        playSong();        
+        playSong();
     }
 }
-

@@ -36,10 +36,11 @@ button{
     left: 0;
     background-color: rgb(24,24,24);
     width: 100vw;
-    height: 14vh;
+    height: 16vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-top: 1px solid #666;
 }
 .the-player{
     display: flex;
@@ -83,8 +84,6 @@ button{
     color: white;
 }
 
-#volumeDown,
-#volumeUp{
-    padding: 4px 8px;
-    background-color: red;
+input{
+    height: 5px;
 }
